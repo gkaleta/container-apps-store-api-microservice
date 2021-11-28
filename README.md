@@ -34,7 +34,7 @@ IMPORTANT: In general, each microservice should have an independent release and 
 3. Open the GitHub Actions, select the **Build and Deploy** action and choose to run the workflow.  
   
     This will start the GitHub Actions which will build the code, publish them to your GitHub repository as private container images, create an Azure Container App environment, a Cosmos DB database, and Container Apps for each of the microservices.
-4. Once the GitHub Actions have completed successfully, navigate to the [Azure Portal](https://portal.azure.com) and select the resource group you created.  Open the `node-app` container, and browse to the URL.  You should see the sample application running.  You can go through the UX to create an order through the order microservice, and then navigate to the `/orders?id=foo` endpoint and `/inventory?id=foo` to get the status via other microservices.  
+4. Once the GitHub Actions have completed successfully, navigate to the [Azure Portal](https://portal.azure.com) and select the resource group you created.  Open the `node-app` container, and browse to the URL.  You should see the sample application running.  You can go through the UX to create an order through the order microservice, and then navigate to the `/order?id=foo` endpoint and `/inventory?id=foo` to get the status via other microservices.  
 5. After calling each microservice, you can open the application insights resource created and select the **Application Map**, you should see a visualization of your calls between Container Apps (note: it may take a few minutes for the app insights data to ingest and process into the app map view).
 
 ### Deploy via Azure Bicep
